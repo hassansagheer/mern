@@ -1,0 +1,31 @@
+nav ul{
+    list-style: none;
+    text-align: center;
+  }
+  nav li{
+    display: inline-block;
+  }
+  .main-nav{
+    background-color: #495e57;
+    display:flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    border-radius: 0px;
+  }
+  .main-nav li{
+    list-style-type: none;
+  }
+  .main-nav a{
+    display: inline-block;
+    padding: 10px;
+    margin: 0 15px;
+    font-size: 2rem;
+    text-align: center;
+    text-decoration: none;
+    color: #ffffff;
+    border-bottom: 5px solid transparent;
+  }
+  .main-nav a:hover{
+    border-bottom: 5px solid #f4ce14;
+    color: #f4ce14;
+  }
