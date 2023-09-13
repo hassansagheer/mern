@@ -8,7 +8,7 @@ import Intro2 from './Intro2';
 import Intro3 from './Intro3';
 import Footer from './Footer';
 
-function App() {
+const App = () => {
   return (
     <div>
       <Nav first="HOME" second="MENU" third="ABOUT" fourth="CONTACT"/>

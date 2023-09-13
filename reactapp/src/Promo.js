@@ -1,8 +1,12 @@
-function Promo(props) {
+const Promo = (props) =>{
+    const styles = {
+        color: "tomato",
+        fontSize: "40px"
+    }
     return (
         <div className="promo-section">
             <div>
-                <h1>Don't miss this deal!, <u>{props.text}</u></h1>
+                <h1 style={styles}>Don't miss this deal!, {props.text}</h1>
                 </div>
                 <div>
                 <h2>Subscribe to my newsletter and get all the shop items at 50% off!</h2>

@@ -1,4 +1,4 @@
-function Intro3() {
+const Intro3 = () => {
     return (
         <div className="blog-post-intro">
             <h2>What's the best way to style your React apps?</h2>

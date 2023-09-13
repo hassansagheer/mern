@@ -1,4 +1,4 @@
-function Intro2() {
+const Intro2 = () => {
     return (
         <div className="blog-post-intro">
             <h2>Why I love front-end web development</h2>
