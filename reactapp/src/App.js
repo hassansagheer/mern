@@ -2,7 +2,8 @@
 import './App.css';
 import './style.css';
 import Nav from './Nav.js';
-import Promo from'./Promo.js';
+import Promo from './Promo.js';
+import Spin from './Spin.js';
 import Intro1 from './Intro1';
 import Intro2 from './Intro2';
 import Intro3 from './Intro3';
@@ -13,6 +14,7 @@ const App = () => {
     <div>
       <Nav first="HOME" second="MENU" third="ABOUT" fourth="CONTACT"/>
       <Promo text="THIS IS PROPS TEXT"/>
+      <Spin />
       <Intro1 />
       <Intro2 />
       <Intro3 />
