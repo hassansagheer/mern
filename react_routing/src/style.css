@@ -1,0 +1,31 @@
+nav{
+    list-style: none;
+    text-align: left;
+}
+nav .nav-item{
+    display: inline-block;
+}
+.nav .nav-item{
+    list-style-type: none;
+}
+.nav{
+    background-color: #D3D3D3;
+    display:flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    border-radius: 0px;
+}
+.nav a{
+    display: inline-block;
+    padding: 15px;
+    margin: 0 15px;
+    font-size: 1.5rem;
+    text-align: center;
+    text-decoration: none;
+    color: #191970;
+    border-bottom: 5px solid transparent;
+}
+.nav a:hover{
+    border-bottom: 5px solid #4169E1;
+    color: #191970;
+}
