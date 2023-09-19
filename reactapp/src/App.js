@@ -10,6 +10,9 @@ import Intro3 from './Intro3';
 import Footer from './Footer';
 import ModeToggler from './ModeToggler';
 import RandomNumber from './RandomNumber';
+import MealsProvider from './MealsProvider';
+import MealsList from './MealsList';
+import Counter from './Counter';
 
 const App = () => {
   return (
@@ -23,6 +26,11 @@ const App = () => {
       <Footer />
       <ModeToggler />
       <RandomNumber />
+
+      <MealsProvider>
+        <MealsList />
+        <Counter />
+      </MealsProvider>
     </div>
   );
 };
