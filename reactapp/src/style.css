@@ -49,3 +49,7 @@ nav ul{
       animation: spin infinite 10s linear;
     }
   }
+
+  h1{
+    color:skyblue;
+  }

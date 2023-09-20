@@ -15,6 +15,8 @@ import MealsProvider from './MealsProvider';
 import MealsList from './MealsList';
 import Counter from './Counter';
 
+import BackgroundAnimation from './BackgroundAnimation';
+
 const App = () => {
   return (
     <div>
@@ -33,6 +35,9 @@ const App = () => {
         <MealsList />
         <Counter />
       </MealsProvider>
+
+      <h1>Background Animation</h1>
+      <BackgroundAnimation />
     </div>
   );
 };
