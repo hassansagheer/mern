@@ -1,10 +1,10 @@
 import React from 'react'
-import UseStateCounter from './tutorial/1-useState/final/5-useState-counter'
+import Index from './tutorial/12-memo-useMemo-useCallback/final'
 function App() {
   return (
     <div className='container'>
       <h2>Advanced Tutorial</h2>
-      <UseStateCounter />
+      <Index  />
     </div>
   )
 }
