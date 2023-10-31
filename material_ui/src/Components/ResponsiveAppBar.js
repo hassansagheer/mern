@@ -15,7 +15,7 @@ import Logo from './Logo.svg';
 import Basket from './Basket.svg';
 
 const pages = ['Home', 'About', 'Menu', 'Reservation', 'Order Online', 'Login'];
-// const settings = ['Profile', 'Account', 'Dashboard', 'Logout'];
+const settings = ['Profile', 'Account', 'Dashboard', 'Logout'];
 
 function ResponsiveAppBar() {
   const [anchorElNav, setAnchorElNav] = React.useState(null);
@@ -37,8 +37,7 @@ function ResponsiveAppBar() {
   };
 
   return (
-    <>
-    <AppBar position="sticky" sx= { { backgroundColor: 'white' }}>
+    <AppBar position="sticky" sx= { { backgroundColor: 'white' }} elevation= {0}>
       <Container maxWidth="xl">
         <Toolbar disableGutters>
           <Box sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' } }}>
@@ -129,17 +128,16 @@ function ResponsiveAppBar() {
               open={Boolean(anchorElUser)}
               onClose={handleCloseUserMenu}
             >
-              {/* {settings.map((setting) => (
+              {settings.map((setting) => (
                 <MenuItem key={setting} onClick={handleCloseUserMenu}>
                   <Typography textAlign="center">{setting}</Typography>
                 </MenuItem>
-              ))} */}
+              ))}
             </Menu>
           </Box>
         </Toolbar>
       </Container>
     </AppBar>
-    </>
   );
 }
 export default ResponsiveAppBar;
