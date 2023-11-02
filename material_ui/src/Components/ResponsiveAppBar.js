@@ -11,8 +11,8 @@ import Avatar from '@mui/material/Avatar';
 import Button from '@mui/material/Button';
 import Tooltip from '@mui/material/Tooltip';
 import MenuItem from '@mui/material/MenuItem';
-import Logo from './Logo.svg';
-import Basket from './Basket.svg';
+import Logo from '../icons_assets/Logo.svg';
+import Basket from '../icons_assets/Basket.svg';
 
 const pages = ['Home', 'About', 'Menu', 'Reservation', 'Order Online', 'Login'];
 const settings = ['Profile', 'Account', 'Dashboard', 'Logout'];
