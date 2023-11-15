@@ -4,10 +4,13 @@ import HeroSection from "./Components/HeroSection";
 import * as React from 'react';
 import Container from '@mui/material/Container';
 import Grid from '@mui/material/Grid';
+import Card from '@mui/material/Card';
+import CardContent from '@mui/material/CardContent';
+import CardMedia from '@mui/material/CardMedia';
 import Typography from '@mui/material/Typography';
-import Button from '@mui/material/Button';
-// import Card from '@mui/material/Card';
-// import CardMedia from '@mui/material/CardMedia';
+import { Button, CardActionArea, CardActions } from '@mui/material';
+import GreekSalad from './icons_assets/greeksalad.jpg';
+import DeliveryDiningIcon from '@mui/icons-material/DeliveryDining';
 
 function App() {
   return (
@@ -20,7 +23,7 @@ function App() {
         <Grid item sm={2} border={1} borderColor="primary.main" sx={{ display: { xs: 'none', sm: 'block' } }}></Grid>
         <Grid item xs={12} sm={5} border={1} borderColor="primary.main">
           <div>
-            <Typography variant="h6" fontSize={30} sx={{color: '#000000'}}>
+            <Typography variant="h6" fontSize={30} sx={{color: '#000000',fontWeight: 'bold'}}>
               This weeks specials!
             </Typography>
           </div>
@@ -29,7 +32,7 @@ function App() {
         {/* <Grid item border={1} borderColor="primary.main"></Grid> */}
         <Grid item xs={12} sm={3} border={1} borderColor="primary.main">
           <div>
-            <Button variant="contained" href="#contained-buttons"  sx={{ color: '#000000', backgroundColor: '#F4EC14', borderRadius: '10px', boxShadow: 0, '&:hover': { color: '#000000', backgroundColor: '#F4EC14' }}} style={{textTransform: 'none'}}>
+            <Button variant="contained" href="#contained-buttons"  sx={{ color: '#000000', fontWeight: 'bold', backgroundColor: '#F4EC14', borderRadius: '10px', boxShadow: 0, '&:hover': { color: '#000000', backgroundColor: '#F4EC14' }}} style={{textTransform: 'none'}}>
               Online Menu
             </Button>
           </div>
@@ -38,16 +41,41 @@ function App() {
       </Grid>
 
       {/* Cards Grid */}
-<Grid container spacing={2}>
+<Grid container spacing={2}  sx={{marginTop: 5}}>
     <Grid item xs={2} sm={2}><Typography>Left column</Typography></Grid>
   <Grid item xs={8} sm={8}>
     <Grid container spacing={2}>
       <Grid item xs={4} sm={4}>
-        <Typography>First column</Typography>
+        {/* <Typography>First column</Typography> */}
+        <Card sx={{ maxWidth: 345 }}>
+      <CardActionArea>
+        <CardMedia
+          component="img"
+          height="140"
+          image={GreekSalad}
+          alt="green iguana"
+        />
+        <CardContent>
+          <Grid container spacing={2}>
+          <Grid xs={12} sm={6}><Typography gutterBottom variant="h5" component="div" sx={{fontWeight: 'bold'}}>Greek Salad</Typography></Grid>
+          <Grid xs={12} sm={6}><Typography gutterBottom variant="h5" component="div" color="#ee9b75" sx={{ textAlign: { xs: "left", sm: "right" }, fontWeight: 'bold' }}>$12.99</Typography></Grid>
+          <Grid><Typography variant="body2" color="text.secondary">The famous greed salad of crispy lettuce, peppers, olives and our Chicago style feta cheese, garnished with crunchy garlic and rosemary croutons.</Typography></Grid>
+          </Grid>
+        </CardContent>
+      </CardActionArea>
+      <CardActions>
+        <Button size="small" href="#order-delivery" sx={{ color: '#000000'}} style={{textTransform: 'none', fontWeight: 'bold'}}>
+          Order a delivery <DeliveryDiningIcon />
+
+        </Button>
+      </CardActions>
+    </Card>
       </Grid>
+
       <Grid item xs={4} sm={4}>
         <Typography>Second column</Typography>
       </Grid>
+
       <Grid item xs={4} sm={4}>
         <Typography>Third column</Typography>
       </Grid>
