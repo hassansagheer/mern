@@ -14,10 +14,10 @@ function HeroSection() {
         <Grid item sm={2} border={1} borderColor="primary.main"  sx={{ display: { xs: 'none', sm: 'block' } }}></Grid>
         <Grid item xs={8} sm={4} border={1} borderColor="primary.main">
           <div>
-            <Typography variant="h6" fontSize={40} sx={{color: '#F4EC14', fontWeight: 'bold'}}>
+            <Typography variant="h6" fontSize={40} sx={{fontSize: {xs:30 , sm:40 }, color: '#F4EC14', fontWeight: 'bold'}}>
               Little Lemon
             </Typography>
-            <Typography variant="h2" fontSize={30} sx={{color: '#EDEFEE', fontWeight: 'bold'}}>
+            <Typography variant="h2" sx={{fontSize: {xs:20 , sm:30 }, color: '#EDEFEE', fontWeight: 'bold'}}>
               Chicago
             </Typography>
           </div>

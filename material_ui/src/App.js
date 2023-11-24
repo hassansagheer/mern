@@ -18,12 +18,12 @@ function App() {
     <ResponsiveAppBar />
     <HeroSection />
 
-    <Container maxWidth="xl" sx= { { backgroundColor: 'white' }}>
+    <Container maxWidth="xl" sx= { { backgroundColor: 'white', mb:5 }}>
       <Grid container spacing={2} sx={{marginTop: 10}}>
         <Grid item sm={2} border={1} borderColor="primary.main" sx={{ display: { xs: 'none', sm: 'block' } }}></Grid>
         <Grid item xs={12} sm={5} border={1} borderColor="primary.main">
           <div>
-            <Typography variant="h6" fontSize={30} sx={{color: '#000000',fontWeight: 'bold'}}>
+            <Typography variant="h6" sx={{fontSize: {xs:25 , sm:30 }, color: '#000000',fontWeight: 'bold'}}>
               This weeks specials!
             </Typography>
           </div>
@@ -42,46 +42,50 @@ function App() {
 
       {/* Cards Grid */}
 <Grid container spacing={2}  sx={{marginTop: 5}}>
-    <Grid item xs={2} sm={2}><Typography>Left column</Typography></Grid>
-  <Grid item xs={8} sm={8}>
+    <Grid item sm={2} sx={{ display: { xs: 'none', sm: 'block' } }}><Typography>Left column</Typography></Grid>
+  <Grid item xs={12} sm={8}>
     <Grid container spacing={2}>
-      <Grid item xs={4} sm={4}>
+      {/* First Card Grid */}
+      <Grid item xs={12} sm={4}>
         {/* <Typography>First column</Typography> */}
-        <Card sx={{ maxWidth: 345 }}>
+        <Card sx={{ maxWidth: 345, borderTopLeftRadius: "20px", borderTopRightRadius: "20px" }}>
       <CardActionArea>
         <CardMedia
           component="img"
-          height="140"
+          height="230"
           image={GreekSalad}
+          borderRadius="5"
           alt="green iguana"
+          sx={{ borderTopLeftRadius: "20px", borderTopRightRadius: "20px" }}
         />
-        <CardContent>
-          <Grid container spacing={2}>
-          <Grid xs={12} sm={6}><Typography gutterBottom variant="h5" component="div" sx={{fontWeight: 'bold'}}>Greek Salad</Typography></Grid>
-          <Grid xs={12} sm={6}><Typography gutterBottom variant="h5" component="div" color="#ee9b75" sx={{ textAlign: { xs: "left", sm: "right" }, fontWeight: 'bold' }}>$12.99</Typography></Grid>
-          <Grid><Typography variant="body2" color="text.secondary">The famous greed salad of crispy lettuce, peppers, olives and our Chicago style feta cheese, garnished with crunchy garlic and rosemary croutons.</Typography></Grid>
+        <CardContent sx={{backgroundColor: "#edefee"}}>
+          <Grid container spacing={2} sx={{ p: 3 }}>
+          <Grid xs={12} sm={6}><Typography gutterBottom variant="h6" component="div" sx={{fontWeight: 'bold'}}>Greek Salad</Typography></Grid>
+          <Grid xs={12} sm={6}><Typography gutterBottom variant="h6" component="div" color="#ee9b75" sx={{ textAlign: { xs: "left", sm: "right" }, fontWeight: 'bold' }}>$12.99</Typography></Grid>
+          <Grid><Typography variant="body2" color="text.secondary" sx={{ mt: 3 }}>The famous greed salad of crispy lettuce, peppers, olives and our Chicago style feta cheese, garnished with crunchy garlic and rosemary croutons.</Typography></Grid>
           </Grid>
         </CardContent>
       </CardActionArea>
-      <CardActions>
+      <CardActions sx={{ p: 3, backgroundColor: "#edefee", display: { xs: "none", sm: "flex" } }}>
         <Button size="small" href="#order-delivery" sx={{ color: '#000000'}} style={{textTransform: 'none', fontWeight: 'bold'}}>
           Order a delivery <DeliveryDiningIcon />
-
         </Button>
       </CardActions>
     </Card>
       </Grid>
 
-      <Grid item xs={4} sm={4}>
+      {/* Second Card Grid */}
+      <Grid item xs={12} sm={4}>
         <Typography>Second column</Typography>
       </Grid>
 
-      <Grid item xs={4} sm={4}>
+      {/* Third Card Grid */}
+      <Grid item xs={12} sm={4}>
         <Typography>Third column</Typography>
       </Grid>
     </Grid>
   </Grid>
-  <Grid item xs={2} sm={2}>
+  <Grid item sm={2} sx={{ display: { xs: 'none', sm: 'block' } }}>
     <Typography>Right column</Typography>
   </Grid>
 </Grid>
