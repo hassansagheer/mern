@@ -61,8 +61,9 @@ function App() {
         <CardContent sx={{backgroundColor: "#edefee"}}>
           <Grid container spacing={2} sx={{ p: 3 }}>
           <Grid xs={12} sm={6}><Typography gutterBottom variant="h6" component="div" sx={{fontWeight: 'bold'}}>Greek Salad</Typography></Grid>
-          <Grid xs={12} sm={6}><Typography gutterBottom variant="h6" component="div" color="#ee9b75" sx={{ textAlign: { xs: "left", sm: "right" }, fontWeight: 'bold' }}>$12.99</Typography></Grid>
-          <Grid><Typography variant="body2" color="text.secondary" sx={{ mt: 3 }}>The famous greed salad of crispy lettuce, peppers, olives and our Chicago style feta cheese, garnished with crunchy garlic and rosemary croutons.</Typography></Grid>
+          <Grid xs={12} sm={6}><Typography gutterBottom variant="h6" component="div" color="#ee9b75" sx={{ display: { xs: "none", sm: "flex" }, flexDirection: { sm: "row-reverse" }, fontWeight: 'bold' }}>$12.99</Typography></Grid>
+          <Grid><Typography variant="body2" color="text.secondary" sx={{ mt: { xs: 0, sm: 3 } }}>The famous greed salad of crispy lettuce, peppers, olives and our Chicago style feta cheese, garnished with crunchy garlic and rosemary croutons.</Typography></Grid>
+          <Grid xs={12} sm={6}><Typography gutterBottom variant="h6" component="div" color="text.secondary" sx={{ mt: {xs: 1}, display: { xs: "flex", sm: "none" }, flexDirection: { xs: "row" }, fontWeight: 'bold' }}>$12.99</Typography></Grid>
           </Grid>
         </CardContent>
       </CardActionArea>
