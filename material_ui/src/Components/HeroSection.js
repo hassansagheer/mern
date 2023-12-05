@@ -11,8 +11,8 @@ function HeroSection() {
     return(
     <Container maxWidth="xl" sx= { { backgroundColor: '#495E57' }}>
       <Grid container spacing={2} sx={{marginTop: 0}}>
-        <Grid item sm={2} border={1} borderColor="primary.main"  sx={{ display: { xs: 'none', sm: 'block' } }}></Grid>
-        <Grid item xs={8} sm={4} border={1} borderColor="primary.main">
+        <Grid item sm={2} sx={{ display: { xs: 'none', sm: 'block' } }}></Grid>
+        <Grid item xs={8} sm={4}>
           <div>
             <Typography variant="h6" fontSize={40} sx={{fontSize: {xs:30 , sm:40 }, color: '#F4EC14', fontWeight: 'bold'}}>
               Little Lemon
@@ -35,19 +35,18 @@ function HeroSection() {
           </div>
           <br></br>
         </Grid>
-        <Grid item sm={1} border={1} borderColor="primary.main"  sx={{ display: { xs: 'none', sm: 'block' } }}></Grid>
-        <Grid item xs={4} sm={3} border={1} borderColor="primary.main">
+        <Grid item sm={1} sx={{ display: { xs: 'none', sm: 'block' } }}></Grid>
+        <Grid item xs={4} sm={3}>
         <Card sx={{ borderRadius: '10px', marginTop: {xs: 25, sm: 0} }}>
           <CardMedia
           component="img"
-          // height="250"
           image={restauranfood}
           alt="restauranfood"
-          sx={{ height: { xs: 'auto', sm: 250 }, width: '100%', objectFit: 'cover' }}
+          sx={{ height: { xs: 100, sm: 250 }, width: '100%', objectFit: 'cover' }}
           />
         </Card>
         </Grid>
-        <Grid item sm={2} border={1} borderColor="primary.main"  sx={{ display: { xs: 'none', sm: 'block' } }}></Grid>
+        <Grid item sm={2} sx={{ display: { xs: 'none', sm: 'block' } }}></Grid>
       </Grid>
     </Container>
     );
