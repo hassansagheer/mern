@@ -94,12 +94,12 @@ function ResponsiveAppBar() {
             }}
           >
           </Typography>
-          <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
+          <Box sx={{ px: 4, flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
             {pages.map((page) => (
               <Button
                 key={page}
                 onClick={handleCloseNavMenu}
-                sx={{ my: 2, color: '#000000', display: 'block', '&:active, &:hover': { color: 'white', bgcolor: '#495E57' }, fontWeight: 'bold' }}
+                sx={{ my: 2, px: 7, color: '#000000', display: 'block', '&:active, &:hover': { color: 'white', bgcolor: '#495E57' }, fontWeight: 'bold' }}
                 style={{ textTransform: 'none' }}
               >
                 {page}
